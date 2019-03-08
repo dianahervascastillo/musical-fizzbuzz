@@ -1,3 +1,5 @@
+"use strict";
+
 const getColor = function() {
   //function to create a random hex number that will be useful to add color to the boxes
   return "#" + Math.random().toString(16).slice(2, 8); //To get the proper HEXADECIMAL value
@@ -38,8 +40,9 @@ const renderCanvas = function(size){
   let numbersList = numbersArray(size);
 
   //we iterate through the array of numbers, so for each number we create a square and append it to canvas, adding diff attributes and bind the onclick event.
-  for(let number of numbersList){
+  for(let i = '0'; i < numbersList.length; i++){ //I actually wanted to use a for of loop but is not supported in IE11 and down.
     let square = document.createElement('button');
+    let number = numbersList[i];
     square.className = 'square square--'+ number;
     square.innerHTML = number;
     square.type = 'button';
