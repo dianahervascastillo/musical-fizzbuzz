@@ -1,0 +1,23 @@
+
+
+.square{
+  width: 5rem;
+  height: 5rem;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  margin: .5rem;
+}
+.square:hover{
+  cursor: pointer;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+  transform: translateY(-1px);
+}
+
+.canvas{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
