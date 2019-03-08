@@ -1,14 +1,49 @@
+html {
+  box-sizing: border-box; /*unifying box model*/
+  font-size: 16px; /*set base font size and line-height*/
+  line-height: 20px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
 
+*, *:before, *:after {
+  box-sizing: inherit;/*spread box model to every child*/
+}
+
+
+h1{
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  h1{
+    font-size: 200%;
+    line-height: 200%;
+  }
+}
+
+header,
+main,
+footer{
+  padding: 1rem;
+  max-width: 1404px;
+  margin: 0 auto;
+}
 
 .square{
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   align-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #ccc;
   margin: .5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 3px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
 }
 .square:hover{
   cursor: pointer;
@@ -20,4 +55,6 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
 }
